@@ -33,5 +33,6 @@ int main(void)
 	int p = 3;
 	double a = sqrt(p * x);
 	double b = pow(p, 1) * pow(x, 2) + sqrt(a);
-	double y = log(pow(b, 2))* log(pow(b, 2))* log(pow(b, 2)) + pow(a, 1) * pow(x, 1);
+	double y = pow(log(pow(b, 2)),3)*  + pow(a, 1) * pow(x, 1);
 	printf("x = %lg, y = %.1lf", x, y);
+	//x=4.1 y=510.1
