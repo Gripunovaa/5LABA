@@ -1,0 +1,37 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#define M_PI            3.14159265358979323846
+
+double A(double gr)
+{
+	double r = gr * M_PI / 180;
+	return r;
+}
+int main(void)
+{
+	setlocale(LC_ALL, "RUS");
+
+	double gr, res;
+	puts("Введите значение:\n");
+	scanf("%lf",&gr);
+	res = A(gr);
+	printf("синус %2.lf градусов = %.6lf радиан\n",gr, sin(res));
+
+
+	double k1 = 8, k2 = 16, k3 = 32, k4 = 64, k5 = 128;
+	printf("Если k = 8: %lg\n", pow(2.f, k1));
+	printf("Если k = 16: %lg\n", pow(2.f, k2));
+	printf("Если k = 32: %lg\n", pow(2.f, k3));
+	printf("Если k = 64: %lg\n", pow(2.f, k4));
+	printf("Если k = 128: %lg\n", pow(2.f, k5));
+
+	double x;
+	puts("ввести значение x");
+	scanf("%lf", &x);
+	int p = 3;
+	double a = sqrt(p * x);
+	double b = pow(p, 1) * pow(x, 2) + sqrt(a);
+	double y = log(pow(b, 2))* log(pow(b, 2))* log(pow(b, 2)) + pow(a, 1) * pow(x, 1);
+	printf("x = %lg, y = %.1lf", x, y);
